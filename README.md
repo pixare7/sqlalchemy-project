@@ -40,34 +40,34 @@ The climate app provides routes to explore weather data, including precipitation
 
 #### Available Routes
 
-![Available Routes](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig4.png)
-
 The climate app provides several routes to explore the weather data:
 
-![Precipitation](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig5.png)
+![Available Routes](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig4.png)
 
 - **Precipitation:**  
   Access the last 12 months of precipitation data as a dictionary, where dates are keys and precipitation (in inches) are values.
 
-![Stations](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig6.png)
+![Precipitation](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig5.png)
 
 - **Stations:**  
   Retrieve a list of all local weather stations.
 
-![Temperature](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig7.png)
+![Stations](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig6.png)
 
 - **Temperature (TOBS):**  
   View the recorded temperatures for the most active station, USC00519281, including dates and temperatures observed.
 
-![Minimum, Maximum, and Average Temperature (Start Date)](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig8.png)
+![Temperature](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig7.png)
 
 - **Minimum, Maximum, and Average Temperature (Start Date):**  
   Input a start date to receive the minimum, maximum, and average temperatures from that date until the last date in the dataset.
 
-![Minimum, Maximum, and Average Temperature (Start and End Date)](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig9.png)
+![Minimum, Maximum, and Average Temperature (Start Date)](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig8.png)
 
 - **Minimum, Maximum, and Average Temperature (Start and End Date):**  
   Input both start and end dates to get the minimum, maximum, and average temperatures for the specified date range.
+
+![Minimum, Maximum, and Average Temperature (Start and End Date)](https://github.com/pixare7/sqlalchemy-project/blob/main/images/fig9.png)
 
 ## Conclusions
 
