@@ -50,6 +50,7 @@ def home():
 
 # Calculate the date one year from the last date in data set.
 def year_before_date(most_recent_date):
+    
     most_recent_date = most_recent_date.date 
     most_recent_date = dt.datetime.strptime(most_recent_date, '%Y-%m-%d').date() 
     one_year_before = most_recent_date - dt.timedelta(days=365)
@@ -58,6 +59,7 @@ def year_before_date(most_recent_date):
     
 @app.route("/api/v1.0/precipitation")
 def precipitation():
+    
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -83,10 +85,11 @@ def precipitation():
 
 @app.route("/api/v1.0/stations")
 def stations():
+    
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    # Query all passengers
+    # Query all stations
     results = session.query(Station.station).all()
 
     session.close()
@@ -98,6 +101,7 @@ def stations():
 
 @app.route("/api/v1.0/tobs")
 def tobs():
+    
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -122,6 +126,7 @@ def tobs():
 
 @app.route("/api/v1.0/<start>")
 def start(start):
+    
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -144,6 +149,7 @@ def start(start):
 
 @app.route("/api/v1.0/<start>/<end>")
 def start_end(start, end):
+    
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -154,8 +160,8 @@ def start_end(start, end):
     # Query for lowest, highest, and average temperature
     results = session.query(
         func.min(Measurement.tobs),
-        func.avg(Measurement.tobs),
-        func.max(Measurement.tobs)).\
+        func.max(Measurement.tobs),
+        func.avg(Measurement.tobs)).\
         filter((Measurement.date >= start_date) & (Measurement.date <= end_date)).all()
 
     session.close()
